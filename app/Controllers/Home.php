@@ -169,7 +169,7 @@ class Home extends BaseController
             'status'        => 'selesai'
         ]);
     
-        return redirect()->to('admin/tanggapan/' . $id_keluhan)->with('message', 'Tanggapan berhasil dikirim dan status diperbarui😎');
+        return redirect()->to('admin/data_keluhan')->with('message', 'Tanggapan berhasil dikirim dan status diperbarui😎');
     }
 }
 
