@@ -61,9 +61,9 @@
                                     <td><?= esc($row['tanggapan']); ?></td>
                                     <td>
                                         <?php if ($row['status'] == 'menunggu') : ?>
-                                            <h4><span class="badge bg-pink-subtle text-pink rounded-pill">Menunggu</span></h4>
+                                            <h4><span class="badge bg-pink-subtle text-pink rounded-pill">Processing</span></h4>
                                         <?php elseif ($row['status'] == 'selesai') : ?>
-                                            <h4><span class="badge bg-primary-subtle text-primary rounded-pill">Selesai</span></h4>
+                                            <h4><span class="badge bg-primary-subtle text-primary rounded-pill">Completed</span></h4>
                                         <?php endif; ?>
                                     </td>
                                     <td>
