@@ -3,7 +3,6 @@
 
         <!-- Start Content-->
         <div class="container-fluid">
-
         <?php if (session()->getFlashdata('message')) : ?>
         <script>
             Swal.fire({
@@ -25,7 +24,6 @@
             });
         </script>
         <?php endif; ?>
-
 
             <div class="col-xl-15">
                 <div class="card">
@@ -58,9 +56,8 @@
                                     <td><?= esc($row['nomor_wa']); ?></td>
                                     <td><?= esc($row['jenis_keluhan']); ?></td>
                                     <td><?= esc($row['rincian']); ?></td>
-
                                     <td>
-                                        <a href="<?= base_url('admin/tanggapan/'. $row['id_keluhan']) ?>" class="btn btn-warning rounded-pill sm me-1"><i class="ri-feedback-fill me-1"></i>Tanggapan</a>
+                                        <a href="<?= base_url('admin/tanggapan/'. $row['id_keluhan']) ?>" class="btn btn-info rounded-pill sm me-1"><i class="ri-question-answer-fill me-1"></i>Give Feedback</a>
                                         <a href="<?= base_url('deleteKeluhan/' . $row['id_keluhan']) ?>" class="btn btn-danger rounded-pill sm me-1" onclick="return confirm('Hapus data ini?')"><i class=" ri-delete-bin-fill me-1"></i>Delete</a>                                   
                                     </td>
                                 </tr>

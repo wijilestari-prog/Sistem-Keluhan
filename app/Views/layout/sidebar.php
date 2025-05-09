@@ -1,5 +1,5 @@
- <!-- ========== Left Sidebar Start ========== -->
- <div class="leftside-menu">
+<!-- ========== Left Sidebar Start ========== -->
+<div class="leftside-menu">
 
 <!-- Brand Logo Light -->
 <a href="/admin" class="logo logo-light">

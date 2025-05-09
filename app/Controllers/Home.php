@@ -37,7 +37,7 @@ class Home extends BaseController
         }
     
         $data = [
-            'title' => 'Data Form',
+            'title' => 'Data Keluhan',
             'keluhan' => $keluhan->findAll()
         ];
     
@@ -137,7 +137,7 @@ class Home extends BaseController
     {
         $keluhan = new KeluhanModel();
         $data = [
-            'title' => 'Edit Keluhan',
+            'title' => 'Give Feedback',
             'keluhan' => $keluhan->find($id_keluhan) 
         ];
 
@@ -154,6 +154,7 @@ class Home extends BaseController
         $id_keluhan = $this->request->getPost('id_keluhan');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
         $email = $this->request->getPost('email');
+        $nomor_wa = $this->request->getPost('nomor_wa');
         $jenis_keluhan = $this->request->getPost('jenis_keluhan');
         $rincian = $this->request->getPost('rincian');
         $tanggapan = $this->request->getPost('tanggapan');
@@ -161,6 +162,7 @@ class Home extends BaseController
         $keluhan->update($id_data, [
             'nama_lengkap' => $nama_lengkap,
             'email' => $email,
+            'nomor_wa' => $nomor_wa,
             'jenis_keluhan' => $jenis_keluhan,
             'rincian' => $rincian,
             'tanggapan' => $tanggapan,
@@ -168,7 +170,6 @@ class Home extends BaseController
     
         return redirect()->to('admin/detail_keluhan/' . $row['id_keluhan'])->with('message', 'Tanggapan berhasil dikirim😎');
     }
-
 }
 
 
