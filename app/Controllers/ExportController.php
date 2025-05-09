@@ -22,6 +22,9 @@ class ExportController extends BaseController
         $sheet->setCellValue('C1', 'NO. WhatsApp');
         $sheet->setCellValue('D1', 'Jenis Keluhan');
         $sheet->setCellValue('E1', 'Rincian');
+        $sheet->setCellValue('F1', 'Tanggapan');
+        $sheet->setCellValue('G1', 'Status');
+
 
         $row = 2;
         foreach ($keluhan as $item) {
@@ -30,6 +33,8 @@ class ExportController extends BaseController
             $sheet->setCellValue('C' . $row, $item['nomor_wa']);
             $sheet->setCellValue('D' . $row, $item['jenis_keluhan']);
             $sheet->setCellValue('E' . $row, $item['rincian']);
+            $sheet->setCellValue('F' . $row, $item['tanggapan']);
+            $sheet->setCellValue('G' . $row, $item['status']);
             $row++;
         }
 
