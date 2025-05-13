@@ -14,20 +14,30 @@ class Home extends BaseController
         return view('login');
     }
 
-    public function dashboard()
-    {
-        if (session()->get('logged_in') != true) {
-            return redirect()->to('/login');
-        }
-        
-        $data = [
-            'title' => 'Home'
-        ];
-        echo view('layout/header',$data);
-        echo view('layout/sidebar');
-        echo view('admin/dashboard');
-        echo view('layout/footer');
+public function dashboard()
+{
+    if (!session()->get('logged_in')) {
+        return redirect()->to('/login');
     }
+
+    $keluhanModel = new KeluhanModel();
+
+    $totalKeluhan = $keluhanModel->countAll();
+    $sudahDitanggapi = $keluhanModel->where('status', 'selesai')->countAllResults();
+    $belumDitanggapi = $keluhanModel->where('status', 'menunggu')->countAllResults();
+
+    $data = [
+        'title' => 'Dashboard',
+        'totalKeluhan' => $totalKeluhan,
+        'sudahDitanggapi' => $sudahDitanggapi,
+        'belumDitanggapi' => $belumDitanggapi,
+    ];
+
+    echo view('layout/header', $data);
+    echo view('layout/sidebar');
+    echo view('admin/dashboard', $data); 
+    echo view('layout/footer');
+}
 
     public function dataKeluhan()
     {
@@ -168,8 +178,16 @@ class Home extends BaseController
             'jenis_keluhan' => $jenis_keluhan,
             'rincian' => $rincian,
             'tanggapan' => $tanggapan,
-            'status'        => 'selesai'
+            'status'        => 'selesai', 'menunggu'
         ]);
+
+        $tanggapan = "Halo *$nama_lengkap* 🤗,\n\n"
+            . "Terima kasih telah menghubungi kami dan menyampaikan keluhan terkait *$jenis_keluhan*. Keluhan kamu sudah kami terima dan kami tindak lanjuti\n\n"
+            . "Setelah kami tinjau, berikut tanggapan dari tim kami:\n$tanggapan\n\n"
+            . "Kami harap penjelasan ini dapat membantu dan masalah yang Anda alami dapat segera teratasi. "
+            . "Jika masih ada pertanyaan atau keluhan lainnya, jangan ragu untuk menghubungi kami kembali.\n\n"
+            . "Salam hangat,\n*Tim Lampung Cerdas*";
+
 
         $whatsapp->sendMessage($nomor_wa, $tanggapan);
 

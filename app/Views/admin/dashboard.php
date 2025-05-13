@@ -26,9 +26,8 @@
                                 <i class=" ri-customer-service-2-line widget-icon"></i>
                             </div>
                             <h6 class="text-uppercase mt-0" title="Customers">Total Keluhan</h6>
-                            <h2 class="my-2">0</h2>
+                            <h2 class="my-2"><?= $totalKeluhan ?></h2>
                             <p class="mb-0">
-                                <span class="badge bg-white bg-opacity-10 me-1">2.97%</span>
                                 <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
@@ -42,10 +41,9 @@
                                 <i class=" ri-chat-heart-line widget-icon"></i>
                             </div>
                             <h6 class="text-uppercase mt-0" title="Customers">Sudah Ditanggapi</h6>
-                            <h2 class="my-2">0</h2>
+                            <h2 class="my-2"><?= $sudahDitanggapi ?></h2>
                             <p class="mb-0">
-                                <span class="badge bg-white bg-opacity-10 me-1">18.25%</span>
-                                <span class="text-nowrap">Since last month</span>
+                                <span class="text-nowrap">Great Job✨</span>
                             </p>
                         </div>
                     </div>
@@ -58,9 +56,8 @@
                                 <i class=" ri-feedback-line widget-icon"></i>
                             </div>
                             <h6 class="text-uppercase mt-0" title="Customers">Belum ditanggapi</h6>
-                            <h2 class="my-2">0</h2>
+                            <h2 class="my-2"><?= $belumDitanggapi ?></h2>
                             <p class="mb-0">
-                                <span class="badge bg-white bg-opacity-25 me-1">-5.75%</span>
                                 <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
