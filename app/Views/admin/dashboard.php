@@ -43,7 +43,7 @@
                             <h6 class="text-uppercase mt-0" title="Customers">Sudah Ditanggapi</h6>
                             <h2 class="my-2"><?= $sudahDitanggapi ?></h2>
                             <p class="mb-0">
-                                <span class="text-nowrap">Great Job✨</span>
+                                <span class="text-nowrap">Since last month</span>
                             </p>
                         </div>
                     </div>

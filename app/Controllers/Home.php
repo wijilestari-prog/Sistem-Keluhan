@@ -182,10 +182,10 @@ public function dashboard()
         ]);
 
         $tanggapan = "Halo *$nama_lengkap* 🤗,\n\n"
-            . "Terima kasih telah menghubungi kami dan menyampaikan keluhan terkait *$jenis_keluhan*. Keluhan kamu sudah kami terima dan kami tindak lanjuti\n\n"
+            . "Terima kasih telah menghubungi kami dan menyampaikan keluhan terkait *$jenis_keluhan*. Keluhan kamu sudah kami terima dan kami tindak lanjuti.\n\n"
             . "Setelah kami tinjau, berikut tanggapan dari tim kami:\n$tanggapan\n\n"
             . "Kami harap penjelasan ini dapat membantu dan masalah yang Anda alami dapat segera teratasi. "
-            . "Jika masih ada pertanyaan atau keluhan lainnya, jangan ragu untuk menghubungi kami kembali.\n\n"
+            . "Jika masih ada pertanyaan atau keluhan lainnya, silahkan hubungi kami kembali.\n\n"
             . "Salam hangat,\n*Tim Lampung Cerdas*";
 
 
