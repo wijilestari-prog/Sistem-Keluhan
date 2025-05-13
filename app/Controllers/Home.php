@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\FormModel;
 use App\Models\KeluhanModel;
+use App\Controllers\Whatsapp;
 
 class Home extends BaseController
 {
@@ -150,6 +151,7 @@ class Home extends BaseController
     public function pressTanggapanKeluhan()
     {
         $keluhan = new KeluhanModel();
+        $whatsapp = new Whatsapp();
     
         $id_keluhan = $this->request->getPost('id_keluhan');
         $nama_lengkap = $this->request->getPost('nama_lengkap');
@@ -168,7 +170,9 @@ class Home extends BaseController
             'tanggapan' => $tanggapan,
             'status'        => 'selesai'
         ]);
-    
+
+        $whatsapp->sendMessage($nomor_wa, $tanggapan);
+
         return redirect()->to('admin/data_keluhan')->with('message', 'Tanggapan berhasil dikirim dan status diperbarui😎');
     }
 }
