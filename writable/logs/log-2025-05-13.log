@@ -1,0 +1,11 @@
+DEBUG - 2025-05-13 03:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-13 03:30:51 --> Error: Call to undefined method CodeIgniter\HTTP\Response::json()
+[Method: GET, Route: whatsapp/6285155318891/halo]
+in APPPATH\Controllers\Whatsapp.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Whatsapp->sendMessage('6285155318891', 'halo')
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Whatsapp))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\FormKeluhan\\public\\index.php')
