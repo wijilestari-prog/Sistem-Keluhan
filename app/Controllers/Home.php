@@ -159,16 +159,17 @@ class Home extends BaseController
         $rincian = $this->request->getPost('rincian');
         $tanggapan = $this->request->getPost('tanggapan');
     
-        $keluhan->update($id_data, [
+        $keluhan->update($id_keluhan, [
             'nama_lengkap' => $nama_lengkap,
             'email' => $email,
             'nomor_wa' => $nomor_wa,
             'jenis_keluhan' => $jenis_keluhan,
             'rincian' => $rincian,
             'tanggapan' => $tanggapan,
+            'status'        => 'selesai'
         ]);
     
-        return redirect()->to('admin/detail_keluhan/' . $row['id_keluhan'])->with('message', 'Tanggapan berhasil dikirim😎');
+        return redirect()->to('admin/data_keluhan')->with('message', 'Tanggapan berhasil dikirim dan status diperbarui😎');
     }
 }
 

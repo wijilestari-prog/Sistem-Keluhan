@@ -43,6 +43,8 @@
                                 <th>No. WhatsApp</th>
                                 <th>Jenis Keluhan</th>
                                 <th>Rincian</th>
+                                <th>Tanggapan</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -56,6 +58,14 @@
                                     <td><?= esc($row['nomor_wa']); ?></td>
                                     <td><?= esc($row['jenis_keluhan']); ?></td>
                                     <td><?= esc($row['rincian']); ?></td>
+                                    <td><?= esc($row['tanggapan']); ?></td>
+                                    <td>
+                                        <?php if ($row['status'] == 'menunggu') : ?>
+                                            <h4><span class="badge bg-pink-subtle text-pink rounded-pill">Processing</span></h4>
+                                        <?php elseif ($row['status'] == 'selesai') : ?>
+                                            <h4><span class="badge bg-primary-subtle text-primary rounded-pill">Completed</span></h4>
+                                        <?php endif; ?>
+                                    </td>
                                     <td>
                                         <a href="<?= base_url('admin/tanggapan/'. $row['id_keluhan']) ?>" class="btn btn-info rounded-pill sm me-1"><i class="ri-question-answer-fill me-1"></i>Give Feedback</a>
                                         <a href="<?= base_url('deleteKeluhan/' . $row['id_keluhan']) ?>" class="btn btn-danger rounded-pill sm me-1" onclick="return confirm('Hapus data ini?')"><i class=" ri-delete-bin-fill me-1"></i>Delete</a>                                   
