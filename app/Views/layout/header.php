@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    </head>
+    <head>
         <!-- App favicon -->
         <link rel="shortcut icon" href="<?= base_url().'assets/images/logo-lampungcerdas.png' ?>">
 
-        <!-- Daterangepicker css -->
-        <link rel="stylesheet" href="<?= base_url(). 'assets/vendor/daterangepicker/daterangepicker.css' ?>">
-
         <!-- Vector Map css -->
         <link rel="stylesheet" href="<?= base_url(). 'assets/vendor/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css' ?>">
+
+        <!-- Datatables css -->
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(). 'assets/vendor/datatables.net-select-bs5/css/select.bootstrap5.min.css'?>" rel="stylesheet" type="text/css" />
+
+        <!-- Daterangepicker css -->
+        <link rel="stylesheet" href="<?= base_url(). 'assets/vendor/daterangepicker/daterangepicker.css' ?>">
 
         <title><?= $title ?> | Lampung Cerdas</title>
 

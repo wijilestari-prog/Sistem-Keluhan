@@ -34,8 +34,8 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                        <table class="table table-borderless table-striped table-hover">
-                            <thead class="bg-primary">
+                            <table id="basic-datatable" class="table table-striped w-100">
+                            <thead class= table-light>
                             <tr>
                                 <th>No</th>
                                 <th>Nama Lengkap</th>
@@ -67,7 +67,7 @@
                                         <?php endif; ?>
                                     </td>
                                     <td>
-                                        <a href="<?= base_url('admin/tanggapan/'. $row['id_keluhan']) ?>" class="btn btn-info rounded-pill sm me-1"><i class="ri-question-answer-fill me-1"></i>Give Feedback</a>
+                                        <a href="<?= base_url('admin/tanggapan/'. $row['id_keluhan']) ?>" class="btn btn-info rounded-pill sm me-1"><i class="ri-question-answer-fill me-1"></i>Feedback</a>
                                         <a href="<?= base_url('deleteKeluhan/' . $row['id_keluhan']) ?>" class="btn btn-danger rounded-pill sm me-1" onclick="return confirm('Hapus data ini?')"><i class=" ri-delete-bin-fill me-1"></i>Delete</a>                                   
                                     </td>
                                 </tr>
